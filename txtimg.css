@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    background-color: coral;
+    place-items: center;
+}
+
+.row {
+    width: auto;
+    max-width: 1170px;
+    background-color: beige;
+    display: flex;
+    grid-template-columns:(2, 1fr);
+    grid-gap: 40px 20px;
+    justify-content: space-around;
+}
+
+.row .left {
+    overflow: hidden;
+}
+
+.item {
+    position: relative;
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  #item1 {
+    top: 100px;
+    left: 40px;
+    margin: -20px;
+    height: 380px;
+    border-radius: 10px;
+  }
+  
+  #item2 {
+    bottom: 50px;
+    left: 150px;
+    margin-top: -90px;
+    border-radius: 50px;
+  }
+
+.row .right {
+    display: grid; 
+    align-items: center;
+}
+
+
+.row.right .contact {
+    padding-left: 20px;
+}
+
+.row.right .contact p {
+    font-size: 16px;
+    line-height: 26px;
+    padding-bottom: 15px;
+} 
+
+.down {
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+.read2 {
+    margin: 30px;
+    position: relative;
+    color: #fff;
+    background-color: rgb(31, 38, 79);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+@media (max-width: 991px) {
+    .row.right .contact {
+        padding-left: 0;
+    }
+    .row {
+        width: 100%;
+        max-width: 1170px;
+        display: flex;
+        grid-template-columns: 1fr;
+        justify-content: space-evenly;
+    }
+
+     .row .left img {
+        width: 300px;
+        height: 250px; 
+        object-fit: cover;
+    }
+
+    #item2 {
+        width: 260px;
+        bottom: 20px;
+        left: 90px;
+      }
+}
+
+@media (max-width: 768px) {
+    .row {
+        width: 100%;
+        max-width: 1170px;
+        display: flex;
+        grid-template-columns: 1fr;
+        justify-content: space-evenly;
+
+    }
+
+    .row .left img {
+        width: 300px;
+        height: 260px;
+        object-fit: cover;
+    }
+    
+    #item2 {
+        width: 260px;
+        bottom: 50px;
+        left: 60px;
+        margin-top: -90px;
+        border-radius: 50px;
+      }
+
+
+      #item1 {
+        top: 90px;
+        left: 40px;
+        margin: -20px;
+        border-radius: 20px;
+      }
+    
+}
